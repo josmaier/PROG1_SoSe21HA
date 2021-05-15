@@ -15,6 +15,7 @@ public class NaehrwertrechnerTest {
 
         Lebensmittel[4] = new Nahrungsmittel("Goldbären", 343, 0.5, 46, 0.07);
 
+        //outputting info for all array elements
         for (Nahrungsmittel nahrungsmittel : Lebensmittel) {
             nahrungsmittel.info();
         }
