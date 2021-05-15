@@ -14,7 +14,6 @@ public class Nahrungsmittel {
         this.fett = fett;
         this.zucker = zucker;
         this.salz = salz;
-
     }
 
     //functions for setting Lebensmittelampel for each parameter
