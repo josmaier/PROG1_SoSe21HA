@@ -1,7 +1,6 @@
 public class Nahrungsmittel {
     //intialising variables
     private double energie, fett, zucker, salz;
-
     private final String lebensmittelName;
     private String ampelFett;
     private String ampelZucker;
@@ -58,7 +57,6 @@ public class Nahrungsmittel {
     }
 
     //setting get functions for variables
-
     public double getEnergie(){
         return energie;
     }
