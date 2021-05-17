@@ -9,26 +9,26 @@ public class Nahrungsmittel {
      * Constructor
      *
      * @param lebensmittelName Name of comestible
-     * @param energie Energy value for comestible per 100g
-     * @param fett Fat value for comestible per 100g
-     * @param zucker Sugar value for comestible per 100g
-     * @param salz Salt value for comestible per 100g
+     * @param energie          Energy value for comestible per 100g
+     * @param fett             Fat value for comestible per 100g
+     * @param zucker           Sugar value for comestible per 100g
+     * @param salz             Salt value for comestible per 100g
      */
     public Nahrungsmittel(String lebensmittelName, double energie, double fett, double zucker, double salz) {
         this.lebensmittelName = lebensmittelName;
-        this.energie = energie;
-        this.fett = fett;
-        this.zucker = zucker;
-        this.salz = salz;
+        this.energie          = energie;
+        this.fett             = fett;
+        this.zucker           = zucker;
+        this.salz             = salz;
     }
 
     /**
      * Methode prints string for given comestible
      */
-    void info(){
-        System.out.println(this.getLebensmittelName() + " - Energie: " + this.getEnergie() + " kcal, Fett: " + this.getFett()
-                + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g (" + this.getAmpelZucker()
-                + ") Salz: " + this.getSalz() + "g (" + this.getAmpelSalz() + ")");
+    void info() {
+        System.out.println(this.getLebensmittelName() + " - Energie: " + this.getEnergie() + " kcal, Fett: "
+                + this.getFett() + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g ("
+                + this.getAmpelZucker() + ") Salz: " + this.getSalz() + "g (" + this.getAmpelSalz() + ")");
     }
 
     /**
@@ -36,7 +36,7 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getEnergie(){
+    public double getEnergie() {
         return this.energie;
     }
 
@@ -45,7 +45,7 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getFett(){
+    public double getFett() {
         return this.fett;
     }
 
@@ -54,7 +54,7 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getZucker(){
+    public double getZucker() {
         return this.zucker;
     }
 
@@ -63,7 +63,7 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getSalz(){
+    public double getSalz() {
         return this.salz;
     }
 
@@ -72,7 +72,7 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getLebensmittelName(){
+    public String getLebensmittelName() {
         return this.lebensmittelName;
     }
 
@@ -81,16 +81,14 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getAmpelFett(){
+    public String getAmpelFett() {
         String result;
-        if (this.getFett() < 3){
+        if (this.getFett() < 3) {
             result = "grün";
-        }
-        else if (this.getFett() > 17.5){
+        } else if (this.getFett() > 17.5) {
             result = "rot";
-        }
-        else{
-            result =  "Gelb";
+        } else {
+            result = "Gelb";
         }
         return result;
     }
@@ -100,16 +98,14 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getAmpelZucker(){
+    public String getAmpelZucker() {
         String result;
-        if (this.getZucker() < 5){
+        if (this.getZucker() < 5) {
             result = "grün";
-        }
-        else if (this.getZucker() > 22.5){
+        } else if (this.getZucker() > 22.5) {
             result = "rot";
-        }
-        else{
-            result =  "Gelb";
+        } else {
+            result = "Gelb";
         }
         return result;
     }
@@ -119,16 +115,14 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getAmpelSalz(){
+    public String getAmpelSalz() {
         String result;
-        if (this.getSalz() < 0.3){
+        if (this.getSalz() < 0.3) {
             result = "grün";
-        }
-        else if (this.getSalz() > 1.5){
+        } else if (this.getSalz() > 1.5) {
             result = "rot";
-        }
-        else{
-            result =  "Gelb";
+        } else {
+            result = "Gelb";
         }
         return result;
     }
