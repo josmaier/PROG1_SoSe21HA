@@ -1,10 +1,7 @@
 public class Nahrungsmittel {
     //intialising variables
-    private double energie, fett, zucker, salz;
+    private final double energie, fett, zucker, salz;
     private final String lebensmittelName;
-    private String ampelFett;
-    private String ampelZucker;
-    private String ampelSalz;
 
     //constructor for setting variables
     public Nahrungsmittel(String lebensmittelName, double energie, double fett, double zucker, double salz) {
@@ -17,22 +14,34 @@ public class Nahrungsmittel {
 
     //function for returning information about as a string
     void info(){
-        System.out.println(lebensmittelName + " - Energie: " + this.getEnergie() + " kcal, Fett: " + this.getFett() + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g (" + this.getAmpelZucker()
+        System.out.println(lebensmittelName + " - Energie: " + this.getEnergie() + " kcal, Fett: " + this.getFett()
+                + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g (" + this.getAmpelZucker()
                 + ") Salz: " + this.getSalz() + "g (" + this.getAmpelSalz() + ")");
     }
 
     /**
-     *     setting get functions for variables
-     * @return
+     * Setting get function for energy value
+     *
+     * @return double
      */
     public double getEnergie(){
         return energie;
     }
 
+    /**
+     * Setting get function for fat value
+     *
+     * @return double
+     */
     public double getFett(){
         return fett;
     }
 
+    /**
+     * Setting get function for sugar value
+     *
+     * @return double
+     */
     public double getZucker(){
         return zucker;
     }
@@ -46,10 +55,11 @@ public class Nahrungsmittel {
     }
     /**
      * Returns a String based on set values for contents of fat in consumable
-     * @return
+     *
+     * @return String
      */
     public String getAmpelFett(){
-        private String result;
+        String result;
         if (this.getFett() < 3){
             result = "grün";
         }
@@ -64,10 +74,10 @@ public class Nahrungsmittel {
 
     /**
      * Returns a String based on set values for contents of sugar in consumable
-     * @return
+     * @return result
      */
     public String getAmpelZucker(){
-        private String result;
+        String result;
         if (this.getZucker() < 5){
             result = "grün";
         }
@@ -82,10 +92,10 @@ public class Nahrungsmittel {
 
     /**
      * Returns a String based on set values for contents of salt in consumable
-     * @return
+     * @return result
      */
     public String getAmpelSalz(){
-        private String result;
+        String result;
         if (this.getSalz() < 0.3){
             result = "grün";
         }
