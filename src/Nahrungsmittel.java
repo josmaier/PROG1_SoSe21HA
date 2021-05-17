@@ -1,9 +1,19 @@
 public class Nahrungsmittel {
-    //intialising variables
+    /**
+     * Initialising variables for class
+     */
     private final double energie, fett, zucker, salz;
     private final String lebensmittelName;
 
-    //constructor for setting variables
+    /**
+     * Constructor
+     *
+     * @param lebensmittelName Name of comestible
+     * @param energie Energy value for comestible per 100g
+     * @param fett Fat value for comestible per 100g
+     * @param zucker Sugar value for comestible per 100g
+     * @param salz Salt value for comestible per 100g
+     */
     public Nahrungsmittel(String lebensmittelName, double energie, double fett, double zucker, double salz) {
         this.lebensmittelName = lebensmittelName;
         this.energie = energie;
@@ -12,47 +22,60 @@ public class Nahrungsmittel {
         this.salz = salz;
     }
 
-    //function for returning information about as a string
+    /**
+     * Methode prints string for given comestible
+     */
     void info(){
-        System.out.println(lebensmittelName + " - Energie: " + this.getEnergie() + " kcal, Fett: " + this.getFett()
+        System.out.println(this.getLebensmittelName() + " - Energie: " + this.getEnergie() + " kcal, Fett: " + this.getFett()
                 + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g (" + this.getAmpelZucker()
                 + ") Salz: " + this.getSalz() + "g (" + this.getAmpelSalz() + ")");
     }
 
     /**
-     * Setting get function for energy value
+     * Getter for energy value
      *
      * @return double
      */
     public double getEnergie(){
-        return energie;
+        return this.energie;
     }
 
     /**
-     * Setting get function for fat value
+     * Getter for fat value
      *
      * @return double
      */
     public double getFett(){
-        return fett;
+        return this.fett;
     }
 
     /**
-     * Setting get function for sugar value
+     * Getter for sugar value
      *
      * @return double
      */
     public double getZucker(){
-        return zucker;
+        return this.zucker;
     }
 
+    /**
+     * Getter for salt value
+     *
+     * @return double
+     */
     public double getSalz(){
-        return salz;
+        return this.salz;
     }
 
+    /**
+     * Setting get function for name
+     *
+     * @return String
+     */
     public String getLebensmittelName(){
-        return lebensmittelName;
+        return this.lebensmittelName;
     }
+
     /**
      * Returns a String based on set values for contents of fat in consumable
      *
@@ -74,7 +97,8 @@ public class Nahrungsmittel {
 
     /**
      * Returns a String based on set values for contents of sugar in consumable
-     * @return result
+     *
+     * @return String
      */
     public String getAmpelZucker(){
         String result;
@@ -92,7 +116,8 @@ public class Nahrungsmittel {
 
     /**
      * Returns a String based on set values for contents of salt in consumable
-     * @return result
+     *
+     * @return String
      */
     public String getAmpelSalz(){
         String result;
@@ -107,5 +132,4 @@ public class Nahrungsmittel {
         }
         return result;
     }
-
 }
