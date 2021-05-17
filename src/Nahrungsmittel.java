@@ -15,48 +15,16 @@ public class Nahrungsmittel {
         this.salz = salz;
     }
 
-    //functions for setting Lebensmittelampel for each parameter
-    String ampelbestimmungFett(){
-        if (fett < 3){
-            return "grün";
-        }
-        else if (fett > 17.5){
-            return "rot";
-        }
-        else{
-            return  "Gelb";
-        }
-    }
-    String ampelbestimmungZucker(){
-        if (zucker < 5){
-            return "grün";
-        }
-        else if (zucker > 22.5){
-            return "rot";
-        }
-        else{
-            return "gelb";
-        }
-    }
-    String ampelbestimmungSalz(){
-        if (salz < 0.3){
-            return "grün";
-        }
-        else if (salz > 1.5){
-            return "rot";
-        }
-        else{
-            return "Gelb";
-        }
-    }
-
     //function for returning information about as a string
     void info(){
-        System.out.println(lebensmittelName + " - Energie: " + energie + " kcal, Fett: " + fett + "g (" + this.ampelbestimmungFett() + ") , Zucker: " + zucker + "g (" + this.ampelbestimmungZucker()
-                + ") Salz: " + salz + "g (" + this.ampelbestimmungSalz() + ")");
+        System.out.println(lebensmittelName + " - Energie: " + this.getEnergie() + " kcal, Fett: " + this.getFett() + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g (" + this.getAmpelZucker()
+                + ") Salz: " + this.getSalz() + "g (" + this.getAmpelSalz() + ")");
     }
 
-    //setting get functions for variables
+    /**
+     *     setting get functions for variables
+     * @return
+     */
     public double getEnergie(){
         return energie;
     }
@@ -76,16 +44,58 @@ public class Nahrungsmittel {
     public String getLebensmittelName(){
         return lebensmittelName;
     }
-
+    /**
+     * Returns a String based on set values for contents of fat in consumable
+     * @return
+     */
     public String getAmpelFett(){
-        return ampelFett;
+        private String result;
+        if (this.getFett() < 3){
+            result = "grün";
+        }
+        else if (this.getFett() > 17.5){
+            result = "rot";
+        }
+        else{
+            result =  "Gelb";
+        }
+        return result;
     }
 
+    /**
+     * Returns a String based on set values for contents of sugar in consumable
+     * @return
+     */
     public String getAmpelZucker(){
-        return ampelZucker;
+        private String result;
+        if (this.getZucker() < 5){
+            result = "grün";
+        }
+        else if (this.getZucker() > 22.5){
+            result = "rot";
+        }
+        else{
+            result =  "Gelb";
+        }
+        return result;
     }
 
+    /**
+     * Returns a String based on set values for contents of salt in consumable
+     * @return
+     */
     public String getAmpelSalz(){
-        return ampelSalz;
+        private String result;
+        if (this.getSalz() < 0.3){
+            result = "grün";
+        }
+        else if (this.getSalz() > 1.5){
+            result = "rot";
+        }
+        else{
+            result =  "Gelb";
+        }
+        return result;
     }
+
 }
