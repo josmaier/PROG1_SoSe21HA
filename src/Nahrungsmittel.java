@@ -77,7 +77,7 @@ public class Nahrungsmittel {
     }
 
     /**
-     * Returns a String based on set values for contents of fat in consumable
+     * Returns a String based on set values for contents of fat in comestible
      *
      * @return String
      */
@@ -94,7 +94,7 @@ public class Nahrungsmittel {
     }
 
     /**
-     * Returns a String based on set values for contents of sugar in consumable
+     * Returns a String based on set values for contents of sugar in comestible
      *
      * @return String
      */
@@ -111,7 +111,7 @@ public class Nahrungsmittel {
     }
 
     /**
-     * Returns a String based on set values for contents of salt in consumable
+     * Returns a String based on set values for contents of salt in comestible
      *
      * @return String
      */
