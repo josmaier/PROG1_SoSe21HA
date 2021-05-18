@@ -6,13 +6,13 @@ public class Nahrungsmittel {
     private final String lebensmittelName;
 
     /**
-     * Constructor
+     * Constructor for a new object of the class Nahrungsmittel
      *
-     * @param lebensmittelName Name of comestible
-     * @param energie          Energy value for comestible per 100g
-     * @param fett             Fat value for comestible per 100g
-     * @param zucker           Sugar value for comestible per 100g
-     * @param salz             Salt value for comestible per 100g
+     * @param lebensmittelName String Name of comestible
+     * @param energie          Double Energy value for comestible per 100g
+     * @param fett             Double Fat value for comestible per 100g
+     * @param zucker           Double Sugar value for comestible per 100g
+     * @param salz             Double Salt value for comestible per 100g
      */
     public Nahrungsmittel(String lebensmittelName, double energie, double fett, double zucker, double salz) {
         this.lebensmittelName = lebensmittelName;
@@ -23,7 +23,7 @@ public class Nahrungsmittel {
     }
 
     /**
-     * Methode prints string for given comestible
+     * Method prints string for given comestible
      */
     void info() {
         System.out.println(this.getLebensmittelName() + " - Energie: " + this.getEnergie() + " kcal, Fett: "
