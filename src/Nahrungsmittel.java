@@ -23,7 +23,7 @@ public class Nahrungsmittel {
     }
 
     /**
-     * Method prints string for given comestible
+     * Method prints string with informatio about given comestible
      */
     void info() {
         System.out.println(this.getLebensmittelName() + " - Energie: " + this.getEnergie() + " kcal, Fett: "
