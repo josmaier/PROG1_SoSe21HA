@@ -2,33 +2,33 @@ public class Nahrungsmittel {
     /**
      * Initialising variables for class
      */
-    private final double energie, fett, zucker, salz;
-    private final String lebensmittelName;
+    private final double energy, fat, sugar, salt;
+    private final String comestibleName;
 
     /**
      * Constructor for a new object of the class Nahrungsmittel
      *
-     * @param lebensmittelName String Name of comestible
-     * @param energie          Double Energy value for comestible per 100g
-     * @param fett             Double Fat value for comestible per 100g
-     * @param zucker           Double Sugar value for comestible per 100g
-     * @param salz             Double Salt value for comestible per 100g
+     * @param comestibleName   String Name of comestible
+     * @param energy           Double Energy value for comestible per 100g
+     * @param fat              Double Fat value for comestible per 100g
+     * @param sugar            Double Sugar value for comestible per 100g
+     * @param salt             Double Salt value for comestible per 100g
      */
-    public Nahrungsmittel(String lebensmittelName, double energie, double fett, double zucker, double salz) {
-        this.lebensmittelName = lebensmittelName;
-        this.energie          = energie;
-        this.fett             = fett;
-        this.zucker           = zucker;
-        this.salz             = salz;
+    public Nahrungsmittel(String comestibleName, double energy, double fat, double sugar, double salt) {
+        this.comestibleName = comestibleName;
+        this.energy          = energy;
+        this.fat             = fat;
+        this.sugar           = sugar;
+        this.salt            = salt;
     }
 
     /**
      * Method prints string with information about given comestible
      */
     void info() {
-        System.out.println(this.getLebensmittelName() + " - Energie: " + this.getEnergie() + " kcal, Fett: "
-                + this.getFett() + "g (" + this.getAmpelFett() + ") , Zucker: " + this.getZucker() + "g ("
-                + this.getAmpelZucker() + ") Salz: " + this.getSalz() + "g (" + this.getAmpelSalz() + ")");
+        System.out.println(this.getComestibleName() + " - Energy: " + this.getEnergy() + " kcal, Fat: "
+                + this.getFat() + "g (" + this.getLightFat() + ") , Sugar: " + this.getSugar() + "g ("
+                + this.getLightSugar() + ") Salt: " + this.getSalt() + "g (" + this.getLightSalt() + ")");
     }
 
     /**
@@ -36,8 +36,8 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getEnergie() {
-        return this.energie;
+    public double getEnergy() {
+        return this.energy;
     }
 
     /**
@@ -45,8 +45,8 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getFett() {
-        return this.fett;
+    public double getFat() {
+        return this.fat;
     }
 
     /**
@@ -54,8 +54,8 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getZucker() {
-        return this.zucker;
+    public double getSugar() {
+        return this.sugar;
     }
 
     /**
@@ -63,8 +63,8 @@ public class Nahrungsmittel {
      *
      * @return double
      */
-    public double getSalz() {
-        return this.salz;
+    public double getSalt() {
+        return this.salt;
     }
 
     /**
@@ -72,8 +72,8 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getLebensmittelName() {
-        return this.lebensmittelName;
+    public String getComestibleName() {
+        return this.comestibleName;
     }
 
     /**
@@ -81,14 +81,14 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getAmpelFett() {
+    public String getLightFat() {
         String result;
-        if (this.getFett() < 3) {
-            result = "grün";
-        } else if (this.getFett() > 17.5) {
-            result = "rot";
+        if (this.getFat() < 3) {
+            result = "green";
+        } else if (this.getFat() > 17.5) {
+            result = "red";
         } else {
-            result = "Gelb";
+            result = "yellow";
         }
         return result;
     }
@@ -98,14 +98,14 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getAmpelZucker() {
+    public String getLightSugar() {
         String result;
-        if (this.getZucker() < 5) {
-            result = "grün";
-        } else if (this.getZucker() > 22.5) {
-            result = "rot";
+        if (this.getSugar() < 5) {
+            result = "green";
+        } else if (this.getSugar() > 22.5) {
+            result = "red";
         } else {
-            result = "Gelb";
+            result = "yellow";
         }
         return result;
     }
@@ -115,14 +115,14 @@ public class Nahrungsmittel {
      *
      * @return String
      */
-    public String getAmpelSalz() {
+    public String getLightSalt() {
         String result;
-        if (this.getSalz() < 0.3) {
-            result = "grün";
-        } else if (this.getSalz() > 1.5) {
-            result = "rot";
+        if (this.getSalt() < 0.3) {
+            result = "green";
+        } else if (this.getSalt() > 1.5) {
+            result = "red";
         } else {
-            result = "Gelb";
+            result = "yellow";
         }
         return result;
     }
