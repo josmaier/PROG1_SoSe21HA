@@ -24,14 +24,13 @@ public class PrimzahlenBestimmenMitDemSiegDesEratosthenes {
             if (true == istPrim[i]) {// if the found entry is a prime number setting multiples of that to false
                 for (int k = 2; k < istPrim.length; k++) {// variable for determining multiples of prime number
 
-                    if (i * k > istPrim.length - 1) continue;// break to prevent out of bounds error
+                    if (i * k > istPrim.length - 1) continue;// prevent out of bounds error
                     istPrim[i * k] = false;
                 }
             }
         }
 
         for (int x = 0; x < istPrim.length; x++) {// outputting all values to console
-
             System.out.println(x + ": " + istPrim[x]);
         }
     }
