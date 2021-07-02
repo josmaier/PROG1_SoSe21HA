@@ -20,8 +20,10 @@ public class Biplane extends Airplane{
         this.serialNumber = Integer.toString(this.serialNr);
     }
 
-
-
+    @Override
+    public boolean getLooping() {
+        return super.getLooping();
+    }
 
     public void getOpenCockpit(){
         System.out.println("Does this biplane have a open cockpit?" + this.openCockpit);
