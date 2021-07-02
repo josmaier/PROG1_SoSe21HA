@@ -30,6 +30,7 @@ public class PrimzahlenBestimmenMitDemSiegDesEratosthenes {
             }
         }
 
+
         for (int x = 0; x < istPrim.length; x++) {// outputting all values to console
             System.out.println(x + ": " + istPrim[x]);
         }
